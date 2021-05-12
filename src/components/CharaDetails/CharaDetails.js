@@ -4,6 +4,7 @@ import './CharaDetails.css'
 function CharaDetails(props) {
     const { list } = props
     const tatooine = "http://swapi.dev/api/planets/1/"
+    const stewjon = "http://swapi.dev/api/planets/20/"
     const newhope = "http://swapi.dev/api/films/1/"
     const empirestrikesback = "http://swapi.dev/api/films/2/"
     const returnofjedi = "http://swapi.dev/api/films/3/"
@@ -34,6 +35,7 @@ function CharaDetails(props) {
                 {character.homeworld === tatooine ? (
                   <p>Home Planet: Tatooine</p>
                 ) : null}
+                {character.homeworld === stewjon ? (<p>Home Planet: Stewjon</p>): null}
                 <p>Appears In:</p>
                 {character.films.includes(newhope) ? <li>A New Hope</li> : null}
                 {character.films.includes(empirestrikesback) ? (
